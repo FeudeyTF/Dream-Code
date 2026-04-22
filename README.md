@@ -1,3 +1,9 @@
+<p align="center">
+    <img src="https://raw.githubusercontent.com/AlecGhost/tree-sitter-vscode/refs/heads/master/icon.png"
+        alt="tree-sitter-vscode logo"
+        height="200">
+</p>
+
 # Dream Code
 
 This extension adds syntax and semantic highlighting for the Dream Maker language in Visual Studio Code using **tree-sitter**.

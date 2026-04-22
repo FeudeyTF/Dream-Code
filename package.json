@@ -1,12 +1,16 @@
 {
-  "name": "dreamcode",
+  "name": "dream-code",
   "displayName": "Dream Code",
   "description": "Dream Maker syntax highlighter powered by Tree-Sitter",
-  "version": "0.0.1",
+  "repository": "https://github.com/FeudeyTF/Dream-Code",
+  "publisher": "feudeytf",
+  "version": "0.0.2",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.116.0"
   },
   "categories": [
+    "Programming Languages",
     "Other"
   ],
   "activationEvents": [
