@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/AlecGhost/tree-sitter-vscode/refs/heads/master/icon.png"
+    <img src="https://raw.githubusercontent.com/FeudeyTF/Dream-Code/refs/heads/master/icon.png"
         alt="tree-sitter-vscode logo"
         height="200">
 </p>
