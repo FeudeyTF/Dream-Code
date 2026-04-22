@@ -1,0 +1,79 @@
+{
+  "name": "dreamcode",
+  "displayName": "Dream Code",
+  "description": "Dream Maker syntax highlighter powered by Tree-Sitter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.116.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:dm",
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "dm",
+        "aliases": [
+          "DM",
+          "Dream Maker"
+        ],
+        "extensions": [
+          ".dm"
+        ]
+      }
+    ],
+    "commands": [],
+    "configuration": {
+      "title": "Dream Code",
+      "properties": {
+        "tree-sitter-dm.dmParserRepository": {
+          "type": "string",
+          "default": "https://github.com/FeudeyTF/tree-sitter-dm",
+          "description": "GitHub repository URL or owner/repo used to download tree-sitter-dm.wasm from the latest release."
+        },
+        "tree-sitter-dm.dmQueriesPath": {
+          "type": "string",
+          "default": "queries/vscode",
+          "description": "Path inside the repository used to download .scm query files (for example: queries or queries/vscode)."
+        },
+        "tree-sitter-dm.debug": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable debug logging in the tree-sitter-dm output channel."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.19.17",
+    "@types/vscode": "^1.116.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.3",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "webpack": "^5.105.3",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "web-tree-sitter": "^0.26.8"
+  }
+}
