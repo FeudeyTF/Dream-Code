@@ -6,7 +6,7 @@
 
 # Dream Code
 
-This extension adds syntax and semantic highlighting for the Dream Maker language in Visual Studio Code using **tree-sitter**.
+This extension adds syntax highlighting for the Dream Maker language in Visual Studio Code using **tree-sitter**.
 
 # Quick Start
 
